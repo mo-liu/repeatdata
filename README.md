@@ -1,24 +1,10 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: mqq
+ * @Date: 2022-10-01 17:10:07
+ * @LastEditors: mqq
+-->
 # repeatdata
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ 代理
