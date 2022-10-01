@@ -1,0 +1,1034 @@
+/*列表页 检索条件模块公用样式 start*/
+.condition_modular_div {
+  margin: 0 15px;
+  opacity: 1;
+
+  .condition_modular_item {
+    border-bottom: 1px solid rgb(197 197 197 / 50%);
+    padding: 10px 0;
+    display: flex;
+    width: 100%;
+
+    .condition_modular_item_block {
+      display: flex;
+      margin-right: 20px;
+      align-items: flex-start;
+      flex: 1;
+
+      .left_label {
+        text-align: right;
+        font-family: PingFangSC-Medium;
+        font-size: 14px;
+        color: #2a2a2a;
+        letter-spacing: 0;
+        line-height: 28px;
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 5px 8px 5px 0;
+      }
+
+      .right_condition {
+        // width: calc(100% - 60px);
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        width: calc(100% - 110px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: 50px;
+        position: relative;
+
+        .tabItem_ul {
+          min-height: 43px;
+
+          // min-width: 100px;
+          .tab_item_copm {
+            margin: 5px 10px 5px 0;
+          }
+        }
+
+        .el-radio-group {
+          display: flex;
+          align-items: center;
+          margin: 6px 0 0 0;
+
+          .el-radio {
+            margin-right: 12px;
+          }
+        }
+
+        .date_range_picker {
+          margin-top: 2px;
+        }
+
+        .date-picker-for-list {
+          height: 32px;
+          margin-top: 2px;
+
+          .el-range-separator {
+            font-size: 14px;
+            line-height: 24px;
+            width: 10%;
+          }
+
+          .el-range__close-icon {
+            display: none;
+          }
+        }
+
+        .el-date-editor.el-input__inner {
+          margin-left: 2px;
+        }
+
+        .el-checkbox {
+          margin: 9px 12px 0 0;
+
+          &.red {
+            .el-checkbox__label {
+              color: @redColor; //#d54341;
+            }
+          }
+
+          &.orange {
+            .el-checkbox__label {
+              color: @orangeColor; //#f6970b;
+            }
+          }
+
+          &.yellow {
+            .el-checkbox__label {
+              color: @yellowColor; //#eec81c;
+            }
+          }
+
+          &.blue {
+            .el-checkbox__label {
+              color: @blueColor; //#1c75e3;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      //地域栏
+      &.condition_modular_item_area {
+        .right_condition {
+          .el-checkbox {
+            @media screen and (max-width: 1500px) {
+              .el-checkbox__label {
+                min-width: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.condition_modular_div_shortLabel {
+    .condition_modular_item {
+      .condition_modular_item_block {
+        .left_label {
+          margin-right: 10px;
+          width: 30px;
+        }
+
+        .right_condition {
+          width: calc(100% - 30px);
+        }
+      }
+    }
+  }
+
+  &.condition_modular_div_source {
+    .condition_modular_item {
+      padding-bottom: 0px;
+
+      .condition_modular_item_block {
+        padding-bottom: 3px;
+      }
+    }
+  }
+
+  &.condition_modular_div_hidden {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    // animation: fade-in 0.3s forwards;
+    // -webkit-animation: fade-in 0.3s forwards;
+  }
+}
+
+// @keyframes fade-in {
+//     from {
+//         height: 100%;
+//         opacity: 1;
+//     }
+
+//     to {
+//         height: 0;
+//         opacity: 0.8;
+//     }
+// }
+/*检索条件：展开/收起*/
+.showOrHiddenCondition_btn_div {
+  position: absolute;
+  bottom: 18px;
+  right: 15px;
+
+  .btn {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #1C75E3;
+    letter-spacing: 0;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+
+    .up_down_icon_a {
+      margin-left: 10px;
+      background: rgba(28, 117, 227, 0.08);
+      border: 1px solid rgba(28, 117, 227, 0.35);
+      border-radius: 2px;
+      display: inline-block;
+      width: 21px;
+      height: 21px;
+      position: relative;
+
+      .iconfont {
+        font-size: 10px;
+        color: #1C75E3;
+        position: absolute;
+        top: 1px;
+        left: 3px;
+        transform: rotate(90deg);
+        display: block;
+      }
+
+      .arrow1 {}
+
+      .arrow2 {
+        color: rgb(28 117 227 / 50%);
+        top: 6px;
+      }
+    }
+  }
+
+  &.hidden {
+    .btn {
+      .up_down_icon_a {
+        .iconfont {
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
+}
+
+/*检索条件：更多/收起*/
+.showOrHiddenMore_btn_div {
+  position: absolute;
+  top: 10px;
+  right: -50px;
+
+  .btn {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #1C75E3;
+    letter-spacing: 0;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+
+    .up_down_icon_a {
+      margin-left: 10px;
+      background: rgba(28, 117, 227, 0.08);
+      border: 1px solid rgba(28, 117, 227, 0.35);
+      border-radius: 2px;
+      display: inline-block;
+      width: 21px;
+      height: 21px;
+      position: relative;
+
+      .iconfont {
+        font-size: 10px;
+        color: #1C75E3;
+        position: absolute;
+        top: 1px;
+        left: 3px;
+        transform: rotate(90deg);
+        display: block;
+      }
+
+      .arrow1 {}
+
+      .arrow2 {
+        color: rgb(28 117 227 / 50%);
+        top: 6px;
+      }
+    }
+  }
+
+  &.hidden {
+    .btn {
+      .up_down_icon_a {
+        .iconfont {
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
+}
+
+/*列表页 检索条件模块公用样式 end*/
+/*列表页 列表信息模块公用样式 start*/
+.comm_lists_div {
+  padding: 15px;
+
+  .comm_lists_header_div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+    .list_select {
+      width: 109px;
+    }
+
+    .lists_header_left_div {
+      padding-left: 0px;
+
+      .el-button {
+        margin-left: 10px;
+        min-width: 65px;
+      }
+    }
+
+    .lists_header_right_div {
+      display: flex;
+      align-items: center;
+      // .hidden_abstr_btn_on {
+      //     background: rgba(28, 117, 227, 0.08);
+      //     border: 1px solid rgba(28, 117, 227, 0.30);
+
+      //     span {
+      //         color: #1C75E3;
+      //     }
+      // }
+      .showOrHideAbstrBtn {
+        border: 0;
+        background: none;
+        color: #949494;
+        font-size: 12px;
+        margin: 0 10px 0 0;
+        padding: 0;
+        cursor: pointer;
+        min-height: 18px;
+      }
+    }
+  }
+
+  .comm_lists_content_div {
+    min-height: 200px;
+
+    .infoListTemplate {
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+
+  .split_line {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background: #D5D5D5;
+    margin: 0 -2px 0 15px;
+  }
+
+  .earlyWarningPN_select {
+    .select-trigger {
+      .el-input {
+        .el-input__inner {
+          border-radius: 2px;
+          height: 19px;
+          line-height: 19px;
+          background: #FFFFFF;
+          border: 1px solid #1D75E3;
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+          color: #1C75E3;
+          letter-spacing: 0;
+          padding-right: 12px;
+          padding-left: 7px;
+          width: 45px;
+        }
+      }
+
+      .el-input.is-disabled {
+        .el-input__suffix {
+          display: flex;
+          align-items: center;
+
+          .el-input__suffix-inner {
+            .el-select__caret {
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+
+      .el-input__suffix {
+        right: 0;
+        //top: -4px;
+
+        .el-input__suffix-inner {
+          .el-select__caret {
+            color: #1C75E3;
+          }
+        }
+      }
+    }
+  }
+
+  /*列表通用icon样式 start*/
+  .iconfont {
+
+    //预警
+    &.icon-yujing {
+      color: #ADADAD;
+
+      &.warningLevelIcon_red {
+        color: @redColor;
+      }
+
+      &.warningLevelIcon_orange {
+        color: @orangeColor;
+      }
+
+      &.warningLevelIcon_yellow {
+        color: @yellowColor;
+      }
+
+      &.warningLevelIcon_blue {
+        color: @blueColor;
+      }
+    }
+
+    //关联
+    &.icon-guanlian {
+      //color: #5FBFA4;
+      color: #ADADAD;
+
+      &.guanlian-on,
+      &:hover {
+        color: #5FBFA4;
+      }
+    }
+
+    //关注
+    &.icon-guanzhu {
+      color: #ADADAD;
+
+      &.guanzhu-on,
+      &:hover {
+        color: #5D6B92;
+      }
+    }
+
+    //推送
+    &.icon-tuisong {
+      color: #ADADAD;
+
+      &.tuisong-on,
+      &:hover {
+        color: #1C75E3;
+      }
+    }
+
+    // //排除
+    // &.icon-shanchu {
+    //     color: #ADADAD;
+
+    //     &.shanchu-on,
+    //     &:hover {
+    //         color: #DD713C;
+    //     }
+    // }
+
+    //恢复
+    &.icon-huifu {
+      color: #ADADAD;
+
+      &.huifu-on,
+      &:hover {
+        color: #30A9D1;
+      }
+    }
+
+    //还原
+    &.icon-huanyuan {
+      color: #ADADAD;
+
+      &.huanyuan-on,
+      &:hover {
+        color: #67AB5C;
+      }
+    }
+
+    //彻底删除
+    // &.icon-chedishanchu {
+    //     color: #ADADAD;
+
+    //     &.chedishanchu-on,
+    //     &:hover {
+    //         color: #3D77B9;
+    //     }
+    // }
+
+    //一键清空
+    &.icon-yijianqingkong {
+      color: #ADADAD;
+
+      &.yijianqingkong-on,
+      &:hover {
+        color: #F56323;
+      }
+    }
+  }
+
+  /*列表通用icon样式 end*/
+}
+
+.infoListTemplate {
+  padding: 20px 5px 0 16px;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid rgba(197, 197, 197, 0.5);
+
+  &:hover {
+    background: #F4F8FF;
+  }
+
+  &::before {
+    content: "";
+    top: 0px;
+    left: 0;
+    width: 4px;
+    height: calc(100% - 0px);
+    position: absolute;
+  }
+
+  .comm_module_list_container {
+    //border-bottom: 1px solid rgb(197 197 197 / 50%);
+    padding-bottom: 17px; //20px;
+    display: flex;
+    width: 100%;
+
+    .check_box_parent {
+      width: 16px;
+      margin-right: 10px;
+    }
+
+    .list_text_div_main {
+      width: calc(100% - 26px);
+
+      .list_text_div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .list_left_title {
+          line-height: 20px;
+          display: flex;
+          width: calc(100% - 140px);
+
+          .list_index {
+            font-family: PingFangSC-Medium;
+            font-size: 14px;
+            color: #4a4a4a;
+            letter-spacing: 0;
+          }
+
+          .list_situation {
+            height: 18px;
+
+            img {
+              height: 18px;
+              margin: 0 4px 0 3px;
+            }
+          }
+          .list_info_item_siteName {
+            font-weight: 600;
+            cursor: initial;
+            .label_value {
+              cursor: initial;
+              .label_value_shudi {
+                color: #0284f4;
+                font-style: normal;
+              }
+            }
+          }
+          .list_title_a {
+            cursor: pointer;
+            font-family: PingFangSC-Medium;
+            font-size: 14px;
+            color: #2a2a2a;
+            letter-spacing: 0;
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            max-width: calc(100% - 365px); //calc(100% - 180px);
+            word-break: break-all;
+          }
+
+          // .list_btn_a {
+          //   margin-left: 10px;
+          //   display: inline-block;
+          //   text-align: center;
+          //   padding: 0 8px;
+          //   height: 20px;
+          //   line-height: 18px;
+          //   box-sizing: border-box;
+          //   background: #edf4fc;
+          //   border: 1px solid #aecef3;
+          //   border-radius: 2px;
+          //   font-family: PingFangSC-Regular;
+          //   font-size: 12px;
+          //   color: #1c75e3;
+          //   letter-spacing: 0;
+          //   // min-width: 46px;
+          //   &.warningLevelInfo {
+          //     background: #5fbfa4;
+          //     border: 1px solid #5fbfa4;
+          //     color: #fff;
+          //   }
+          //   &.warningLevelInfo_1 {
+          //     background: #d43d3b;
+          //     border: 1px solid #d43d3b;
+          //     color: #fff;
+          //   }
+          //   /*事件*/
+          //   &.event_btn {
+          //     cursor: pointer;
+          //     background: #488fe4;
+          //     border: 1px solid#488FE4;
+          //     color: #fff;
+          //   }
+          //   /*上榜*/
+          //   &.shangbang_btn {
+          //     cursor: pointer;
+          //     background: #f3945b;
+          //     border: 1px solid#F3945B;
+          //     color: #fff;
+          //   }
+          //   /*领导指示*/
+          //   &.leaderInstruct_btn {
+          //     background: #e95659;
+          //     border: 1px solid #e95659;
+          //     color: #fff;
+          //   }
+          //   /*记录*/
+          //   &.records_btn {
+          //     background: #5fbfa4;
+          //     border: 1px solid #5fbfa4;
+          //     color: #fff;
+          //     cursor: pointer;
+          //   }
+          //   /*评分中/已评分*/
+          //   &.score_btn {
+          //     background: #00a7c7;
+          //     border: 1px solid #00a7c7;
+          //     color: #fff;
+          //   }
+          //   /*处置中/已处置*/
+          //   &.disposal_btn {
+          //     background: #f38613;
+          //     border: 1px solid #f38613;
+          //     color: #fff;
+          //   }
+          //   /*联处中/已联处*/
+          //   &.joint_btn {
+          //     background: #038eca;
+          //     border: 1px solid #038eca;
+          //     color: #fff;
+          //   }
+          //   /*会商中/已会商*/
+          //   &.consult_btn {
+          //     background: #3fc6cb;
+          //     border: 1px solid #3fc6cb;
+          //     color: #fff;
+          //   }
+          //   /*事项类型*/
+          //   &.eventType_btn{
+
+          //   }
+          //   /*未处理*/
+          //   &.weichuli_btn{
+
+          //   }
+          // }
+          // //线下匹配
+          // .intellect_match_a {
+          //     margin-left: 25px;
+          //     font-size: 12px;
+          //     color: #4a4a4a;
+
+          //     .span_info {
+          //         color: #0073eb;
+
+          //         .num {
+          //             font-style: normal;
+          //         }
+
+          //         .line {
+          //             font-style: normal;
+          //             color: #4a4a4a;
+          //         }
+          //     }
+          // }
+        }
+
+        .list_title_right_icons_div {
+          display: flex;
+          align-items: center;
+
+          .comm_operate_icon {
+            margin-left: 16px;
+            cursor: pointer;
+
+            .iconfont {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .list_abstr_div {
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #656565;
+        letter-spacing: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+
+        a {
+          line-height: 25px;
+        }
+      }
+
+      .list_other_info {
+        margin-top: 9px;
+        display: flex;
+        justify-content: space-between;
+
+        .list_other_info_left {
+          line-height: 20px;
+          width: calc(100% - 80px); //calc(100% - 275px);
+          display: flex;
+          flex-wrap: wrap;
+
+          .list_info_item {
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #656565;
+            letter-spacing: 0;
+            margin-right: 15px; //30px;
+
+            .label_value {
+              color: #2a2a2a;
+
+              i.label_value_shudi {
+                color: #0284F4;
+                font-style: normal;
+              }
+            }
+
+            .label_icon {
+              color: red;
+            }
+
+            &.list_info_item_time {
+              margin-right: 10px;
+              margin-bottom: 4px;
+            }
+
+            &.list_info_item_keywords {
+              .label_value {
+                color: #d43d3b;
+
+                &:not(:last-child) {
+                  margin-right: 5px;
+                }
+              }
+            }
+
+            &.list_info_item_similar {
+
+              //color: #1c75e3;
+              margin-right: 5px;
+
+              .label_value {
+                color: #1c75e3;
+              }
+            }
+
+            &:last-child {
+              margin-right: 5px;
+            }
+          }
+
+          //智能推荐
+          .intellect_recommend_a {
+            font-size: 12px;
+            color: #0284f4;
+
+            .span_info {
+              color: #0284f4; // #d43d3b; //#0073eb;
+
+              .num {
+                font-style: normal;
+              }
+              .i_info {
+                font-style: normal;
+              }
+            }
+          }
+
+          //全网匹配
+          .whole_net_watching_a {
+            font-size: 12px;
+            color: #0284f4;
+
+            .iconfont {
+              font-size: 12px;
+              color: red;
+              margin-right: 3px;
+            }
+
+            .span_info {
+              color: #0284f4;
+
+              .num {
+                font-style: normal;
+              }
+            }
+          }
+
+          //线下匹配
+          .intellect_match_a {
+            // margin-left: 25px;
+            margin-right: 20px;
+            font-size: 12px;
+            color: #0284f4;
+
+            .span_info {
+              color: #0284f4;
+
+              .num {
+                font-style: normal;
+              }
+
+              .line {
+                font-style: normal;
+                padding: 0 3px;
+                //color: #4a4a4a; // #d43d3b; // #4a4a4a;
+              }
+            }
+          }
+        }
+
+        .list_other_info_right {
+          display: flex;
+          align-items: flex-start;
+
+          &.comm_operate_div {
+            // .comm_operate_item {
+            //     border-radius: 2px;
+            //     border-radius: 2px;
+            //     display: inline-block;
+            //     height: 20px;
+            //     line-height: 20px;
+            //     box-sizing: border-box;
+            //     padding: 0 8px;
+            //     margin-left: 10px;
+            //     font-family: PingFangSC-Regular;
+            //     font-size: 12px;
+            //     color: #ffffff;
+            //     letter-spacing: 0;
+            //     cursor: pointer;
+
+            //     //处置
+            //     &.chuzhi_btn {
+            //         // background-image: linear-gradient(
+            //         //   46deg,
+            //         //   #fdad03 0%,
+            //         //   #f38613 100%
+            //         // );
+            //         background: #f38613;
+            //     }
+
+            //     //报送
+            //     &.baosong_btn {
+            //         // background-image: linear-gradient(
+            //         //   90deg,
+            //         //   #31cabf 1%,
+            //         //   #25ada4 100%
+            //         // );
+            //         background: #679fe1;
+            //     }
+
+            //     //上报
+            //     &.shangbao_btn {
+            //         // background-image: linear-gradient(
+            //         //   135deg,
+            //         //   #f34144 0%,
+            //         //   #d02528 100%
+            //         // );
+            //         background: #558fd3;
+            //     }
+
+            //     //研判
+            //     &.yanpan_btn {
+            //         // background-image: linear-gradient(
+            //         //   135deg,
+            //         //   #3fc5ef 0%,
+            //         //   #1cace2 100%
+            //         // );
+            //         background: #1faee3;
+            //     }
+
+            //     //预警
+            //     &.yujing_btn {
+            //         // background-image: linear-gradient(
+            //         //   46deg,
+            //         //   #f86567 0%,
+            //         //   #eb3538 100%
+            //         // );
+            //         background: #e95659;
+            //     }
+
+            //     //恢复
+            //     &.huifu_btn {
+            //         // background-image: linear-gradient(
+            //         //   225deg,
+            //         //   #e68121 0%,
+            //         //   #f69c49 100%
+            //         // );
+            //         background: #5e9f8c;
+            //     }
+
+            //     //还原
+            //     &.huanyuan_btn {
+            //         // background-image: linear-gradient(
+            //         //   135deg,
+            //         //   #5cc5ec 0%,
+            //         //   #45a1ff 100%
+            //         // );
+            //         background: #5e9f8c;
+            //     }
+
+            //     //发起会商/查看会商
+            //     &.huishang_btn {
+            //         // background-image: linear-gradient(
+            //         //   135deg,
+            //         //   #91cd28 0%,
+            //         //   #67a028 100%
+            //         // );
+            //         background: #3fc6cb;
+            //     }
+
+            //     //发起评分/查看评分
+            //     &.pingfen_btn {
+            //         // background-image: linear-gradient(
+            //         //   135deg,
+            //         //   #f7d039 0%,
+            //         //   #d4a800 100%
+            //         // );
+            //         background: #00a7c7;
+            //     }
+
+            //     //发起联处/查看联处
+            //     &.lianchu_btn {
+            //         // background-image: linear-gradient(
+            //         //   45deg,
+            //         //   #6ca3e3 0%,
+            //         //   #4083d2 100%
+            //         // );
+            //         background: #038eca;
+            //     }
+            // }
+          }
+        }
+
+        &.list_other_info_1 {
+          margin-top: 0;
+          .list_other_info_left {
+            width: 100%;
+          }
+        }
+      }
+
+      &.list_text_div_main_noCheckbox {
+        width: 100%;
+      }
+    }
+  }
+
+  &.warningLevel_red {
+    &::before {
+      background: @redColor; // #d54341;
+    }
+  }
+
+  &.warningLevel_orange {
+    &::before {
+      background: @orangeColor; //#f6970b;
+    }
+  }
+
+  &.warningLevel_yellow {
+    &::before {
+      background: @yellowColor; // #eec81c;
+    }
+  }
+
+  &.warningLevel_blue {
+    &::before {
+      background: @blueColor; //#1c75e3;
+    }
+  }
+
+  &:first-child {
+    &::before {
+      // top: 5px;
+      // height: calc(100% - 5px);
+      top: 0;
+      height: calc(100% - 0px);
+    }
+  }
+
+  &:last-child {
+    border-bottom: 0;
+
+    &::before {
+      height: calc(100% - 5px);
+    }
+  }
+}
+
+/*列表页 列表信息模块公用样式 end*/

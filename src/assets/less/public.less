@@ -1,0 +1,1746 @@
+// 有色的iconfont图标
+.svg_icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+// 通用颜色相关
+.red {
+  color: #F55449;
+}
+
+.blue {
+  color: #1C75E3;
+}
+
+.green {
+  color: #5FBFA4;
+}
+
+.yellow {
+  color: #EBC82A;
+}
+
+.grey {
+  color: #B3B3B3;
+}
+
+.orange {
+  color: #f6970b;
+}
+
+.black {
+  color: #4A4A4A;
+}
+
+//提示
+.tishi {
+  color: #f6970b;
+}
+
+//评分
+.pingfen {
+  color: #00a7f0;
+}
+
+//待办
+.huishang {
+  color: #be824d;
+}
+
+// 主体部分样式
+.trs_main {
+  height: calc(100vh - 60px);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  perspective: 3000px;
+
+  .trs_main_content {
+    width: calc(100vw - 200px);
+    position: relative;
+    overflow-y: auto;
+
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: transform .2s linear, opacity 0.2s linear;
+      overflow: hidden;
+      position: absolute;
+      width: calc(100% - 30px);
+      top: 15px;
+      left: 15px;
+    }
+
+    .fade-enter-from,
+    .fade-leave-to {
+      opacity: 0;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      width: calc(100% - 30px);
+      transform: translateX(3%);
+    }
+  }
+
+  .trs_container {
+    width: calc(100%);
+    box-sizing: border-box;
+    padding: 15px 15px 0;
+    background-color: #EAEFF3;
+
+    // min-height: 100%;
+    &>div {
+      width: 100%;
+    }
+  }
+}
+
+.pager {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.block_container {
+  background: #FFFFFF;
+  border-radius: 3px;
+  border-radius: 3px;
+  min-height: 54px;
+}
+
+.positionR {
+  position: relative;
+}
+
+.border0 {
+  border: 0 !important;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.mt15 {
+  margin-top: 15px !important;
+}
+
+.mr15 {
+  margin-right: 15px !important;
+}
+
+.mr12 {
+  margin-right: 12px !important;
+}
+
+.mr10 {
+  margin-right: 10px !important;
+}
+
+.clear {
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #858688;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #858688;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #858688;
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #858688;
+}
+
+input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #858688;
+}
+
+//通用input
+input.form-control {
+  border-radius: 4px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #dcdee0;
+  outline: none;
+  color: #797979;
+
+  &:hover {
+    border-color: #55A8FD;
+  }
+
+  &:focus {
+    border-color: #55A8FD;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: rgba(212, 223, 229, 1);
+  }
+}
+
+.search_input_has_select_div {
+  display: inline-block;
+  margin-left: 10px;
+  width: 276px;
+
+  .input-with-select {
+    .el-input-group__prepend {
+      .el-select {
+        .select-trigger {
+          .el-input {
+            .el-input__inner {
+              width: 99px;
+              text-align: center;
+            }
+
+            .el-input__suffix {
+              display: flex;
+              align-items: center;
+
+              .el-input__suffix-inner {
+                .el-input__icon {
+                  line-height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//通用textarea
+textarea.form-control {
+  border: 1px solid rgba(212, 223, 229, 1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  resize: none;
+  font-size: 14px;
+  line-height: 22px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #797979;
+
+  &:hover {
+    border-color: #55A8FD;
+  }
+
+  &:focus {
+    border-color: #55A8FD;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: rgba(212, 223, 229, 1);
+    background: rgba(250, 250, 250, 1);
+    cursor: not-allowed;
+  }
+}
+
+// 通用表格样式
+.comm_table_box {
+  table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    thead {
+      background-color: #eaeff3;
+
+      tr {
+        th {
+          padding: 10px;
+          font-size: 14px;
+          color: #2a2a2a;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #C5C5C5;
+
+        td {
+          font-size: 14px;
+          padding: 10px;
+          word-break: break-all;
+
+          .overflow_text {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+
+          &.tb_number {
+            text-align: left;
+            width: 150px;
+          }
+
+          &.tb_check {
+            width: 60px;
+          }
+
+          &.tb_title {
+            width: 20%;
+          }
+
+          &.tb_options {
+            .iconfont {
+              color: #9B9B9B;
+              font-size: 20px;
+              vertical-align: middle;
+            }
+
+            .line {
+              vertical-align: middle;
+              display: inline-block;
+              height: 11px;
+              width: 1px;
+              background-color: #979797;
+              margin: 0 7px;
+            }
+          }
+
+          //操作列
+          &.td_operation {
+            .iconfont {
+              font-size: 16px;
+              color: #9b9b90;
+              cursor: pointer;
+
+              &:hover {
+                color: @themeColor;
+              }
+
+              &:not(:last-child) {
+                margin-right: 20px;
+                position: relative;
+
+                &::after {
+                  position: absolute;
+                  content: '';
+                  width: 1px;
+                  height: 11px;
+                  background-color: rgba(151, 151, 151, 0.4);
+                  top: 50%;
+                  transform: translateY(-50%);
+                  right: -9.5px;
+                }
+              }
+            }
+          }
+
+          // &.col_operation {
+          //   .operation_icon {
+          //     position: relative;
+          //     display: inline-block;
+
+          //     .iconfont {
+          //       color: #9B9B9B;
+          //       font-size: 14px;
+          //       cursor: pointer;
+          //       margin: 0 6px;
+          //     }
+
+          //     &::before {
+          //       content: "";
+          //       right: -1px;
+          //       top: 4px;
+          //       width: 1px;
+          //       height: 11px;
+          //       position: absolute;
+          //       background: rgb(151 151 151 / 40%);
+          //     }
+          //     &:last-child{
+          //       &::before {
+          //         display: none;
+          //       }
+          //     }
+          //   }
+          // }
+        }
+      }
+    }
+  }
+}
+
+/**********tooltipster start***********/
+.tooltip_templates {
+  display: none;
+}
+
+.info_list_tooltip_div.tooltipster-sidetip.custom_theme .tooltipster-box {
+  border-radius: 4px;
+  border: 1px solid #d5d5d5;
+  background: #fff;
+  box-shadow: 0px 1px 8px 0px #b8b8b8;
+}
+
+.info_list_tooltip_div.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background {
+  border-bottom-color: #ffffff !important;
+  top: 3px;
+}
+
+.info_list_tooltip_div.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
+  border-top-color: #ffffff !important;
+  top: 1px;
+}
+
+.info_list_tooltip_div.tooltipster-sidetip.custom_theme.tooltipster-bottom .tooltipster-arrow-border {
+  border-bottom-color: #d5d5d5;
+}
+
+.tooltipster-sidetip .tooltipster-content {
+  padding: 2px 8px;
+}
+
+.tooltipster-sidetip.custom_theme .tooltipster-box {
+  border-radius: 4px;
+  border: 1px solid #4d89ff;
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.13);
+}
+
+/*通用tip*/
+.tooltipster-sidetip.custom_theme .tooltipster-content {
+  color: #000;
+  font-size: 14px;
+  line-height: 26px;
+  padding: 5px 12px;
+  word-wrap: break-word;
+  word-break: break-all;
+  //white-space: pre-wrap !important;
+}
+
+/*通用tip：小号的【small_tip】*/
+.tooltipster-sidetip.custom_theme.small_tip .tooltipster-content {
+  color: #000;
+  font-size: 14px;
+  line-height: 26px;
+  padding: 0px 6px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+
+.tooltipster-sidetip.custom_theme .tooltipster-arrow {
+  height: 11px;
+  margin-left: -11px;
+  width: 22px;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-left .tooltipster-arrow,
+.tooltipster-sidetip.custom_theme.tooltipster-right .tooltipster-arrow {
+  height: 22px;
+  margin-left: 0;
+  margin-top: -11px;
+  width: 11px;
+}
+
+.tooltipster-sidetip.custom_theme .tooltipster-arrow-background {
+  border: 9px solid transparent;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-bottom .tooltipster-arrow-border {
+  border-bottom-color: #4d89ff;
+  top: 2px;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-bottom .tooltipster-arrow-background {
+  border-bottom-color: #fff;
+  top: 4px;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-left .tooltipster-arrow-background {
+  border-left-color: #fff;
+  left: 0px;
+  top: 2px;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-left .tooltipster-arrow-border {
+  border-left-color: #4d89ff;
+  left: 2px;
+  top: 2px;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-right .tooltipster-arrow-border {
+  border-right-color: #4d89ff;
+  left: 2px;
+  top: 2px;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-right .tooltipster-arrow-background {
+  border-right-color: #fff;
+  left: 4px;
+  top: 2px;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-top .tooltipster-arrow-border {
+  border-top-color: #4d89ff;
+  top: 2px;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-top .tooltipster-arrow-background {
+  border-top-color: #fff;
+  top: 0px;
+}
+
+.tooltipster-sidetip.custom_theme .tooltipster-arrow-border {
+  border-width: 9px;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-bottom .tooltipster-arrow-uncropped {
+  top: -11px;
+}
+
+.tooltipster-sidetip.custom_theme.tooltipster-right .tooltipster-arrow-uncropped {
+  left: -11px;
+}
+
+.tooltip_templates {
+  display: none;
+}
+
+.tooltipster-sidetip .tooltipster-arrow-border {
+  top: 2px;
+}
+
+/**********tooltipster end***********/
+/**********transitons 动画 start***********/
+.fadeIn-enter-active {
+  animation: fedeInRight 0.3s;
+}
+
+.fadeIn-leave-active {
+  animation: fadeOutLeft 0.2s;
+}
+
+@keyframes fedeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.animate__fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.animate__fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+}
+
+/**********transitons 动画 end***********/
+/**********弹窗表格样式 start***********/
+.comm_table_box_for_modal {
+
+  table,
+  th,
+  td {
+    border: 1px solid #e8e8e8;
+  }
+
+  table {
+    thead {
+      background: rgba(234, 239, 243, 0.6);
+
+      tr {
+        th {
+          color: #000000;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          &.col_dept {
+            width: 15%; //80px;
+          }
+
+          &.col_explain {
+            width: 33%;
+
+            .el-form-item {
+              margin-bottom: 0;
+            }
+          }
+
+          &.col_files {
+            width: 32%; //200px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            .col_files_ul {
+              padding-top: 5px;
+
+              .col_files_li {
+                position: relative;
+                background: rgba(28, 117, 227, 0.03);
+                border: 1px solid rgba(28, 117, 227, 0.25);
+                border-radius: 2px;
+                height: 30px;
+                line-height: 30px;
+                margin-bottom: 13px;
+
+                .file_name {
+                  font-size: 14px;
+                  color: #000000;
+                  letter-spacing: 0;
+                  line-height: 30px;
+                  display: inline-block;
+                  width: 180px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+
+                .del_btn {
+                  position: absolute;
+                  top: -14px;
+                  right: -8px;
+                  cursor: pointer;
+                  width: 16px;
+                  height: 16px;
+                  border-radius: 50%;
+                  background: #fff;
+
+                  .iconfont {
+                    color: #aeaeae;
+                    font-size: 16px;
+                  }
+                }
+
+                &:hover {
+                  border: 1px solid rgba(28, 117, 227, 0.65);
+
+                  .del_btn {
+                    .iconfont {
+                      color: #1c75e3;
+                    }
+                  }
+                }
+              }
+            }
+
+            .upload_btn {
+              background: #1c75e3;
+              border-radius: 2px;
+              color: #fff;
+              border: 1px solid #1c75e3;
+              width: 100%;
+            }
+          }
+
+          &.col_operation {
+            width: 20%; //117px;
+
+            .el-radio-group {
+              display: flex;
+              line-height: 30px;
+              vertical-align: middle;
+              font-size: 0;
+              align-items: center;
+              justify-content: left;
+              flex-wrap: wrap;
+
+              .el-radio {
+                width: 100%;
+                margin: 11px 0;
+                text-align: left;
+                padding-left: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**********弹窗表格样式 end***********/
+/**********操作按钮样式 start***********/
+// .comm_operate_div {
+//   .comm_operate_item {
+//     border-radius: 2px;
+//     border-radius: 2px;
+//     display: inline-block;
+//     height: 20px;
+//     line-height: 20px;
+//     box-sizing: border-box;
+//     padding: 0 8px;
+//     margin-left: 10px;
+//     font-family: PingFangSC-Regular;
+//     font-size: 12px;
+//     color: #ffffff;
+//     letter-spacing: 0;
+//     cursor: pointer;
+
+//     //处置
+//     &.chuzhi_btn {
+//       // background-image: linear-gradient(
+//       //   46deg,
+//       //   #fdad03 0%,
+//       //   #f38613 100%
+//       // );
+//       background: #f38613;
+//     }
+
+//     //报送
+//     &.baosong_btn {
+//       // background-image: linear-gradient(
+//       //   90deg,
+//       //   #31cabf 1%,
+//       //   #25ada4 100%
+//       // );
+//       background: #679fe1;
+//     }
+
+//     //上报
+//     &.shangbao_btn {
+//       // background-image: linear-gradient(
+//       //   135deg,
+//       //   #f34144 0%,
+//       //   #d02528 100%
+//       // );
+//       background: #558fd3;
+//     }
+
+//     //研判
+//     &.yanpan_btn {
+//       // background-image: linear-gradient(
+//       //   135deg,
+//       //   #3fc5ef 0%,
+//       //   #1cace2 100%
+//       // );
+//       background: #1faee3;
+//     }
+
+//     //预警
+//     &.yujing_btn {
+//       // background-image: linear-gradient(
+//       //   46deg,
+//       //   #f86567 0%,
+//       //   #eb3538 100%
+//       // );
+//       background: #e95659;
+//     }
+
+//     //恢复
+//     &.huifu_btn {
+//       // background-image: linear-gradient(
+//       //   225deg,
+//       //   #e68121 0%,
+//       //   #f69c49 100%
+//       // );
+//       background: #5e9f8c;
+//     }
+
+//     //还原
+//     &.huanyuan_btn {
+//       // background-image: linear-gradient(
+//       //   135deg,
+//       //   #5cc5ec 0%,
+//       //   #45a1ff 100%
+//       // );
+//       background: #5e9f8c;
+//     }
+
+//     //发起会商/查看会商
+//     &.huishang_btn {
+//       // background-image: linear-gradient(
+//       //   135deg,
+//       //   #91cd28 0%,
+//       //   #67a028 100%
+//       // );
+//       background: #3fc6cb;
+//     }
+
+//     //发起评分/查看评分
+//     &.pingfen_btn {
+//       // background-image: linear-gradient(
+//       //   135deg,
+//       //   #f7d039 0%,
+//       //   #d4a800 100%
+//       // );
+//       background: #00a7c7;
+//     }
+
+//     //发起联处/查看联处
+//     &.lianchu_btn {
+//       // background-image: linear-gradient(
+//       //   45deg,
+//       //   #6ca3e3 0%,
+//       //   #4083d2 100%
+//       // );
+//       background: #038eca;
+//     }
+//   }
+// }
+/*通用预警列表/预警详情页：title后面展示的状态按钮*/
+/*快照*/
+.kuaizhao_icon {
+  color: #0073eb;
+  font-size: 14px;
+  //font-weight: bold;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.list_btn_a {
+  margin-left: 10px;
+  display: inline-block;
+  text-align: center;
+  padding: 0 8px;
+  height: 20px;
+  line-height: 18px;
+  box-sizing: border-box;
+  background: #edf4fc;
+  border: 1px solid #aecef3;
+  border-radius: 2px;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #1c75e3;
+  letter-spacing: 0;
+
+  // min-width: 46px;
+  &.warningLevelInfo {
+    background: #5fbfa4;
+    border: 1px solid #5fbfa4;
+    color: #fff;
+  }
+
+  &.warningLevelInfo_1 {
+    background: #d43d3b;
+    border: 1px solid #d43d3b;
+    color: #fff;
+  }
+  /*事件*/
+  &.event_btn {
+    background: #488fe4;
+    border: 1px solid#488FE4;
+    color: #fff;
+  }
+
+  /*上榜*/
+  &.shangbang_btn {
+    cursor: pointer;
+    background: #f56c6c; // #4EA5EF;
+    border: 1px solid #f56c6c; //#4EA5EF;
+    color: #fff;
+  }
+
+  /*领导批示*/
+  &.leaderInstruct_btn {
+    background: #e95659;
+    border: 1px solid #e95659;
+    color: #fff;
+  }
+
+  /*记录*/
+  &.records_btn {
+    background: #5fbfa4;
+    border: 1px solid #5fbfa4;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /*评分中/已评分*/
+  &.score_btn {
+    background: #00a7c7;
+    border: 1px solid #00a7c7;
+    color: #fff;
+  }
+
+  /*处置中/已处置*/
+  &.disposal_btn {
+    background: #f38613;
+    border: 1px solid #f38613;
+    color: #fff;
+  }
+
+  /*联处中/已联处*/
+  &.joint_btn {
+    background: #038eca;
+    border: 1px solid #038eca;
+    color: #fff;
+  }
+
+  /*已报送*/
+  &.yibaosong_btn {
+    background: rgb(103, 159, 225);
+    border: 1px solid rgb(103, 159, 225);
+    color: #fff;
+    //cursor: pointer;
+  }
+
+  /*已上报*/
+  &.yishangbao_btn {
+    background: rgb(85, 143, 211);
+    border: 1px solid rgb(85, 143, 211);
+    color: #fff;
+    //cursor: pointer;
+  }
+
+  /*已完结*/
+  &.finish_btn {
+    background: #4A4A4A;
+    border: 1px solid #4A4A4A;
+    color: #fff;
+  }
+
+  /*会商中/已会商*/
+  &.consult_btn {
+    background: #3fc6cb;
+    border: 1px solid #3fc6cb;
+    color: #fff;
+  }
+
+  /*事项类型*/
+  &.eventType_btn {
+    background: #4EA5EF;
+    border: 1px solid #4EA5EF;
+    color: #fff;
+  }
+
+  /*未处理*/
+  &.weichuli_btn {
+    background: #E95659;
+    border: 1px solid #E95659;
+    color: #fff;
+  }
+
+  /*查看原预警*/
+  &.chakanyuanyujing_btn {
+    background: #F2945B;
+    border: 1px solid #F2945B;
+    color: #fff;
+  }
+
+  /*已逾期*/
+  &.overdue_btn {
+    background: #d9001b;
+    border: 1px solid #d9001b;
+    color: #fff;
+  }
+
+  // 即将逾期
+  &.overdue_soon_btn {
+    background: #f59a23;
+    border: 1px solid #f59a23;
+    color: #fff;
+  }
+  // 正面
+  &.negative_btn{
+    background: #5E9F8C;
+    border: 1px solid #5E9F8C;
+    color: #ffffff;
+  }
+  // 负面
+  &.positive_btn{
+    background: #F06767;
+    border: 1px solid #F06767;
+    color: #ffffff;
+  }
+  // 中性
+  &.neutral_btn{
+    background: #4A90E2;
+    border: 1px solid #4A90E2;
+    color: #ffffff;
+  }
+}
+
+//列表右下角操作按钮
+.comm_operate_item {
+  border-radius: 2px;
+  border-radius: 2px;
+  display: inline-block;
+  height: 20px;
+  line-height: 18px;
+  box-sizing: border-box;
+  //padding: 0 8px;
+  margin-left: 10px;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  //color: #ffffff;
+  letter-spacing: 0;
+  cursor: pointer;
+  text-align: center;
+  min-width: 58px;
+  border: 1px solid #A8A8A8;
+  color: #4A4A4A;
+
+  //处置
+  &.chuzhi_btn {
+    // background-image: linear-gradient(
+    //   46deg,
+    //   #fdad03 0%,
+    //   #f38613 100%
+    // );
+    // border: 1px solid #f38613;
+    // background: #f38613;
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //报送
+  &.baosong_btn {
+    // background-image: linear-gradient(
+    //   90deg,
+    //   #31cabf 1%,
+    //   #25ada4 100%
+    // );
+    // border: 1px solid #679fe1;
+    // background: #679fe1;
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //上报
+  &.shangbao_btn {
+    // background-image: linear-gradient(
+    //   135deg,
+    //   #f34144 0%,
+    //   #d02528 100%
+    // );
+    // border: 1px solid #558fd3;
+    // background: #558fd3;
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //研判
+  &.yanpan_btn {
+    // background-image: linear-gradient(
+    //   135deg,
+    //   #3fc5ef 0%,
+    //   #1cace2 100%
+    // );
+    // border: 1px solid #1faee3;
+    // background: #1faee3;
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //核查
+  &.hecha_btn {
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //预警
+  &.yujing_btn {
+    // background-image: linear-gradient(
+    //   46deg,
+    //   #f86567 0%,
+    //   #eb3538 100%
+    // );
+    // border: 1px solid #e95659;
+    // background: #e95659;
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //恢复
+  &.huifu_btn {
+    // background-image: linear-gradient(
+    //   225deg,
+    //   #e68121 0%,
+    //   #f69c49 100%
+    // );
+    // border: 1px solid #5e9f8c;
+    // background: #5e9f8c;
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //还原
+  &.huanyuan_btn {
+    // background-image: linear-gradient(
+    //   135deg,
+    //   #5cc5ec 0%,
+    //   #45a1ff 100%
+    // );
+    // border: 1px solid #5e9f8c;
+    // background: #5e9f8c;
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //发起会商/查看会商
+  &.huishang_btn {
+    // background-image: linear-gradient(
+    //   135deg,
+    //   #91cd28 0%,
+    //   #67a028 100%
+    // );
+    // border: 1px solid #3fc6cb;
+    // background: #3fc6cb;
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+    white-space: nowrap;
+    padding: 0 4px;
+  }
+
+  //发起评分/查看评分
+  &.pingfen_btn {
+    // background-image: linear-gradient(
+    //   135deg,
+    //   #f7d039 0%,
+    //   #d4a800 100%
+    // );
+    // border: 1px solid #00a7c7;
+    // background: #00a7c7;
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //发起联处/查看联处
+  &.lianchu_btn {
+    // background-image: linear-gradient(
+    //   45deg,
+    //   #6ca3e3 0%,
+    //   #4083d2 100%
+    // );
+    // border: 1px solid #038eca;
+    // background: #038eca;
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //查看事件
+  &.chakanshijian_btn {
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //吹哨 按钮
+  &.chuishao_btn {
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //屏蔽/上屏 按钮
+  &.pingbi_btn {
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //排序 按钮
+  &.paixu_btn {
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  //修改 按钮
+  &.xiugai_btn {
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+
+  &.default_btn {
+    background: #0284F4;
+    border: 1px solid #0284F4;
+    color: #ffffff;
+  }
+}
+
+/*更多操作：省略号按钮 + tooltip start*/
+.comm_more_info_btn {
+  text-align: center;
+  padding: 0 0px !important;
+  background: #0284F4;
+  border: 1px solid #0284F4;
+  border-radius: 2px;
+  display: inline-block;
+  height: 20px;
+  width: 25px;
+  line-height: 20px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0;
+  cursor: pointer;
+  min-width: auto;
+}
+
+.comm_more_info_tooltip {
+  .tooltipster-box {
+    .tooltipster-content {
+      .comm_more_info_btn_box {
+        .el-button {
+          border: 1px solid #ABABAB;
+          border-radius: 2px;
+          min-width: 43px;
+          height: 19px;
+          line-height: 19px;
+          box-sizing: border-box;
+          padding: 0 8px;
+          min-height: auto;
+          font-size: 12px;
+          color: #4A4A4A;
+        }
+      }
+    }
+  }
+}
+
+.notificat_unread_tooltip {
+  .tooltipster-box {
+    border: none !important;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.17) !important;
+
+    .tooltipster-content {
+      padding: 10px !important;
+      max-height: 310px;
+      width: 310px;
+      box-sizing: border-box;
+
+      .notificat_unread_list_temp {
+        .top_info_box {
+          background: #F4F5F7;
+          height: 35px;
+          line-height: 35px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row;
+          padding: 0 10px;
+
+          .top_info_box_left {
+            .text {
+              font-family: PingFangSC-Regular;
+              font-size: 14px;
+              color: #4A4A4A;
+              letter-spacing: 0;
+
+              &.num {
+                color: #1C75E3;
+              }
+            }
+          }
+
+          .top_info_box_right {
+            .all_read {
+              cursor: pointer;
+              font-size: 12px;
+              color: #4A4A4A;
+              margin-right: 10px;
+            }
+
+            .more {
+              cursor: pointer;
+              font-size: 12px;
+              color: #1C75E3;
+            }
+          }
+        }
+
+        .main_list_box {
+          max-height: 245px;
+          overflow-y: auto;
+
+          ul {
+            li {
+              height: 64px;
+              box-sizing: border-box;
+              border-bottom: 1px solid #E2E2E2;
+              padding: 12px 10px;
+              cursor: pointer;
+
+              &:hover {
+                background: #F2F8FF;
+              }
+
+              .title {
+                max-width: 100%;
+                line-height: 17px;
+                font-size: 12px;
+                color: #2A2A2A;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 10px;
+              }
+
+              .time {
+                font-size: 12px;
+                line-height: 12px;
+                color: #656565;
+              }
+            }
+          }
+
+          .no_message {
+            height: 100%;
+            padding-top: 12px;
+            text-align: center;
+            color: #aeaeae;
+          }
+        }
+      }
+    }
+  }
+
+  .tooltipster-arrow {
+    .tooltipster-arrow-uncropped {
+      .tooltipster-arrow-border {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
+.bangzhu_tooltip {
+  .tooltipster-box {
+    .tooltipster-content {
+      .bangzhu_list_temp {
+        .list_info_div {
+          li {
+            border-bottom: 1px solid #e3e4e6;
+            span {
+              cursor: pointer;
+            }
+            &:last-child {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*更多操作：省略号按钮 + tooltip end*/
+/**********操作按钮样式 end***********/
+
+
+/*============== 危机联处-我的待办 所有列表的详情页 公共样式提取  start===========*/
+.feedback_container {
+  .title {
+    margin: 20px 0;
+    font-weight: 500;
+    color: #1c75e3;
+    height: 35px;
+    border-bottom: 1px solid #e2e2e2;
+    padding-left: 16px;
+
+    &>span {
+      display: inline-block;
+      height: calc(100% + 2px);
+      border-bottom: 3px solid #1c75e3;
+      margin-left: 16px;
+    }
+  }
+
+  .file_container {
+    margin-top: 20px;
+    border: 1px solid #e2e2e2;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    padding-bottom: 20px;
+
+    .file_item {
+      margin-right: 20px;
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+
+      .file_logo {
+        position: relative;
+
+        .svg_icon {
+          &.file {
+            font-size: 30px;
+            color: @themeColor;
+          }
+        }
+
+        .iconfont {
+          cursor: pointer;
+          position: absolute;
+          top: -7px;
+          right: -7px;
+          font-size: 15px;
+          color: #aeaeae;
+        }
+      }
+
+      .item_name {
+        font-size: 14px;
+        color: #656565;
+        max-width: 90px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .add_file_btn {
+      cursor: pointer;
+      background: rgba(68, 180, 222, 0.12);
+      border: 1px solid rgba(68, 180, 222, 0.34);
+      border-radius: 2px;
+      width: 114px;
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      font-size: 14px;
+      color: #656565;
+
+      .iconfont {
+        font-size: 25px;
+        color: #44b4de;
+      }
+    }
+
+    &.edit_file_container {
+      &::after {
+        content: '说明：上传附件最多支持5个，单个大小限制为10MB';
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        line-height: 20px;
+        font-size: 12px;
+        color: #909399;
+      }
+    }
+  }
+
+  .feedback_detail {
+    .info_item {
+      margin-bottom: 25px;
+      width: 100%;
+      display: inline-flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      line-height: 30px;
+
+      .info_label {
+        margin-right: 10px;
+        color: #4a4a4a;
+        width: 85px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.log_container {
+  position: relative;
+
+  .title {
+    margin-top: 25px;
+    font-weight: 500;
+    color: #1c75e3;
+    height: 35px;
+    border-bottom: 1px solid #e2e2e2;
+
+    .tips {
+      display: inline-block;
+      height: calc(100% + 2px);
+      border-bottom: 3px solid #1c75e3;
+      margin-left: 16px;
+    }
+
+    img {
+      position: absolute;
+      top: 4px;
+      height: 13px;
+      width: 5px;
+      left: 78px;
+    }
+  }
+
+  .clock {
+    position: relative;
+    left: 83px;
+    top: 26px;
+    color: #038eca;
+    display: flex;
+    align-items: center;
+    width: 220px;
+
+    span {
+      font-weight: 500;
+      color: #1c75e3;
+      line-height: 20px;
+    }
+
+    .icon_img {
+      font-size: 22px;
+      margin-right: 11px;
+    }
+  }
+
+  ul {
+    position: relative;
+    top: 24px;
+
+    .line {
+      position: absolute;
+      left: 93px;
+      right: 0;
+      height: 100%;
+      width: 3px;
+      background: rgba(28, 117, 227, 0.31);
+    }
+
+    li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+
+      .title {
+        font-size: 17px;
+        color: #999999;
+      }
+
+      .left {
+        padding: 9px 0;
+        justify-content: space-between;
+        height: 60px;
+
+        .time {
+          display: block;
+          color: #2a2a2a;
+        }
+      }
+
+      .center {
+        position: absolute;
+        left: 83px;
+        color: #038eca;
+        font-size: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .right {
+        position: relative;
+        left: 39px;
+
+        .right_title {
+          color: #2a2a2a;
+        }
+
+        .processCategory {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          span {
+            color: #2a2a2a;
+            margin-right: 20px;
+
+            .span_color {
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*============== 危机联处-我的待办 所有列表的详情页 公共样式提取  end===========*/
+
+// 排序箭头样式
+.sort_switch_container {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    color: #289adf;
+  }
+
+  .sort_inner {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    height: 14px;
+    width: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    overflow: initial;
+    position: relative;
+
+    .topTriangle {
+      position: absolute;
+      border-bottom: 5px solid #9e9fa0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      top: 0;
+    }
+
+    .bottomTriangle {
+      position: absolute;
+      border-top: 5px solid #9e9fa0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      top: 7.5px;
+    }
+  }
+
+  &.active_sort {
+    &[direction='desc'] {
+      .bottomTriangle {
+        border-top: 5px solid #2799DF;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+    }
+
+    &[direction='asc'] {
+      .topTriangle {
+        border-bottom: 5px solid #2799DF;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+    }
+  }
+}
+
+/*有点击事件的标题文字hover的颜色：通用*/
+.common_hover_lighting {
+  &:hover {
+    color: #1C75E3 !important; // #f3c140 !important;
+  }
+}
+
+/*上级下发 列表页：上级任务状态 颜色值 start*/
+//待处理/待签收
+.issued_by_superior_red {
+  color:#F06767;
+}
+//已完结/已退回
+.issued_by_superior_green {
+  color:#5E9F8C;
+}
+//进行中/处置中/
+.issued_by_superior_blue {
+  color:#4A90E2;
+}
+/*上级下发 列表页：上级任务状态 颜色值 end*/

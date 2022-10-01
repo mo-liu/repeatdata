@@ -1,0 +1,499 @@
+/**
+ * @description: element组件样式重置
+ * @author: qian.qianchen
+ */
+/*================ radio start ==================*/
+.el-radio {
+  margin-right: 12px;
+  color: #4A4A4A;
+
+  .el-radio__input {
+    .el-radio__inner {
+      border-color: #bbb;
+    }
+  }
+
+  .el-radio__label {
+    padding-left: 7px;
+  }
+
+  &.is-checked {
+    .el-radio__label {
+      color: #4A4A4A;
+    }
+
+    .el-radio__input {
+      .el-radio__inner {
+        border: 1px solid @themeColor;
+        background-color: white;
+
+        &::after {
+          width: 6px;
+          height: 6px;
+          background-color: @themeColor;
+        }
+      }
+    }
+  }
+}
+
+/*================ radio end ==================*/
+/*================ button end ==================*/
+.el-button {
+
+  min-height: 25px;
+  padding: 4px 8px;
+  font-weight: normal;
+  border-radius: 3px;
+
+  .iconfont {
+    font-size: 14px;
+
+    &.left_icon {
+      padding-right: 5px;
+    }
+  }
+
+  &.el-button--default {
+    border-color: #A8A8A8; // #7687A0;
+    color: #4A4A4A;
+  }
+
+  &.el-button--primary {
+    border-color: #468DE8;
+    background-color: #468DE8;
+    color: white;
+
+    &.is-plain {
+      background-color: rgba(28, 117, 227, 0.08);
+      border-color: rgba(28, 117, 227, 0.30);
+      color: #1C75E3;
+    }
+  }
+
+  &.el-button--warning {
+    border-color: #FDAD03;
+    background-color: #FDAD03;
+    color: white;
+  }
+}
+
+/*================ button end ==================*/
+/*================ input start ==================*/
+.el-input {
+  line-height: 28px;
+
+  .el-input__inner {
+    border-color: #C4C4C4;
+    border-radius: 3px;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  &.input-with-select {
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    line-height: 26px;
+
+    .el-input-group__prepend {
+      border: none;
+      overflow: hidden;
+
+      .el-select {
+        .el-input {
+          .el-input__inner {
+            width: 71px;
+            background-color: white;
+            border-right: 1px solid #C4C4C4;
+            padding: 0 20px 0 9px;
+            border-radius: 0;
+            text-align: left;
+            font-size: 14px;
+            color: #4A4A4A;
+            transform: translateY(-1px);
+            height: 25px;
+            line-height: 25px;
+          }
+
+          .el-input__suffix {
+            right: 0;
+            top: -1px;
+          }
+        }
+      }
+    }
+
+    .el-input__inner {
+      border: none;
+      padding: 0 10px;
+      height: 26px;
+    }
+
+    .el-input-group__append {
+      border: none;
+      background-color: white;
+      color: #2a2a2a;
+      font-size: 16px;
+    }
+  }
+
+  &.input_max_length {
+
+    //WEN-921
+    .el-input__inner {
+      padding-right: 60px;
+    }
+  }
+
+  .el-icon-search {
+    &::before {
+      color: #4A4A4A;
+    }
+  }
+
+  .el-input__icon {
+    line-height: 25px;
+  }
+}
+
+/*================ input end ==================*/
+/*================ checkbox start ==================*/
+.el-checkbox {
+  margin-right: 12px;
+  color: #4A4A4A;
+
+  .el-checkbox__input {
+    .el-checkbox__inner {
+      width: 16px;
+      height: 16px;
+      border-color: #bbb;
+      border-radius: 1px;
+
+      &::after {
+        top: 2px;
+        left: 5px;
+      }
+    }
+
+    &.is-indeterminate {
+      .el-checkbox__inner {
+        background: @themeColor;
+        border-color: @themeColor;
+
+        &::before {
+          top: 6px;
+        }
+      }
+    }
+  }
+
+  .el-checkbox__label {
+    padding-left: 7px;
+  }
+
+  &.is-checked {
+    .el-checkbox__inner {
+      background: @themeColor;
+      border-color: @themeColor;
+    }
+
+    .el-checkbox__label {
+      color: @themeColor;
+    }
+  }
+}
+
+/*================ checkbox end ==================*/
+/*================ select start ==================*/
+
+.el-select {
+  .el-input__inner {
+
+    &:hover,
+    &:focus {
+      border-color: @themeColor;
+    }
+  }
+
+  .el-input {
+    .el-input__suffix {
+      display: flex;
+      align-items: center;
+
+      .el-input__suffix-inner {
+        .el-input__icon {
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+
+/*================ select end ==================*/
+/*================ popper start ==================*/
+.el-popper {
+  .el-select-dropdown {
+    .el-scrollbar {
+      .el-select-dropdown__item {
+        &.selected {
+          color: @themeColor;
+        }
+      }
+    }
+  }
+}
+
+/*================ popper end ==================*/
+/*================ datepicker start ==================*/
+.el-date-editor {
+  &.el-input__inner {
+    height: 28px;
+    line-height: 28px;
+
+    .el-range-separator,
+    .el-range__icon {
+      width: 7%;
+      line-height: 20px;
+    }
+  }
+}
+
+.el-picker__popper {
+  .el-picker-panel {
+    .el-picker-panel__footer {
+
+      /*隐藏清空按钮*/
+      .el-button--text {
+        display: none;
+      }
+
+      .el-button+.el-button {
+        margin-right: 10px;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/*================ datepicker end ==================*/
+/*================ pagination start ==================*/
+.el-pagination {
+  font-size: 14px;
+  color: #656565;
+  font-weight: normal;
+  display: inline-block;
+  vertical-align: middle;
+
+  .btn-prev,
+  .btn-next {
+    background: #FFFFFF;
+    border: 1px solid #E9E9E9;
+    border-radius: 2px;
+    width: 60px;
+    height: 27px;
+    margin-right: 10px;
+    padding: 0;
+
+    &:hover {
+      color: @themeColor;
+    }
+  }
+
+  .el-pager {
+    li {
+      min-width: 27px;
+      height: 27px;
+      line-height: 27px;
+      margin-right: 10px;
+      background: #FFFFFF;
+      border: 1px solid #E9E9E9;
+      border-radius: 4px;
+
+      &.active+li {
+        border-left: 1px solid #E9E9E9;
+      }
+
+      &:hover {
+        color: @themeColor;
+      }
+    }
+
+    .number {
+      &.active {
+        background-color: @themeColor;
+        border-color: @themeColor;
+        color: white;
+      }
+    }
+  }
+
+  .el-pagination__jump {
+    margin-left: 20px;
+
+    .el-input {
+      width: 30px;
+    }
+  }
+}
+
+/*================ pagination end ==================*/
+/*================ switch start ==================*/
+.el-switch {
+  margin: 0;
+}
+
+/*================ switch end ==================*/
+/*================ tree start ==================*/
+.el-tree {
+  .el-tree-node {
+    color: #2a2a2a;
+
+    .el-tree-node__content {
+      min-height: 26px;
+      height: auto;
+    }
+
+    .el-tree-node__expand-icon {
+      font-size: 16px;
+    }
+
+    .el-tree-node__label {
+      white-space: pre-wrap;
+      padding: 5px 0;
+    }
+  }
+}
+
+/*================ tree end ==================*/
+/*================ inputNumber start ==================*/
+.el-input-number.num-select {
+  width: 150px;
+  line-height: 35px;
+  vertical-align: middle;
+
+  .el-input-number__increase,
+  .el-input-number__decrease {
+    width: 35px;
+    height: 33px;
+    line-height: 33px;
+  }
+
+  .el-input {
+    line-height: 1;
+
+    .el-input__inner {
+      height: 35px;
+      line-height: 35px;
+      background: #F1F2F3;
+      border-color: #E3E3E3;
+    }
+  }
+}
+
+/*================ inputNumber end ==================*/
+/*================ upload start ==================*/
+.el-upload {
+  width: 100%;
+
+  .el-button {
+    width: 100%;
+    background: #1c75e3;
+    border-radius: 2px;
+    color: #fff;
+    border: 1px solid #1c75e3;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+.el-upload-list {
+  .el-upload-list__item {
+    margin-top: 0px;
+    text-align: left;
+
+    &:first-child {
+      margin-top: 5px;
+    }
+
+    .el-upload-list__item-name {
+      font-size: 14px;
+      margin-right: 20px;
+    }
+
+    .el-progress__text {
+      position: absolute;
+      right: -20px;
+      top: -13px;
+      text-align: right;
+
+      span {
+        font-size: 10px;
+      }
+    }
+
+    &.is-success {
+      &.focusing {
+        .el-icon-close-tip {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+/*================ upload end ==================*/
+
+.el-popper {
+  max-width: 40%;
+  color: #000 !important;
+  background: #fff !important;
+  border: solid 1px #1C75E3;
+
+  .el-popper__arrow {
+    bottom: -5px !important;
+
+    &:before {
+      background: #fff !important;
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent #1C75E3 #1C75E3 transparent;
+    }
+  }
+}
+
+.el-cascader {
+  .el-input {
+
+    .el-input__inner {}
+
+    .el-input__suffix {
+      .el-input__suffix-inner {
+        .el-input__icon {
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix() {
+
+  //解决火狐浏览器双滚动条问题
+  .el-select-dropdown {
+    .el-scrollbar {
+      .el-scrollbar__bar {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.el-radio-button__original-radio{
+  &:disabled{
+    &:checked+.el-radio-button__inner{
+      background-color:red;
+    }
+  }
+}
